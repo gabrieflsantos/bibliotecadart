@@ -1,0 +1,59 @@
+****Livro.Dart
+
+
+class Livro{
+
+String titulo;
+String autor;
+int anoPublicacao;
+bool emprestado;
+
+Livro(this.titulo, this.autor, this.anoPublicacao) : emprestado = false; 
+
+
+// Exibir As informações que você fez  
+void exibirDetalhes()
+{
+print("Titulo:\ $titulo. Autor: \ $autor. ano: \ $anoPublicacao. Emprestador: \ $emprestado.");
+
+}}
+
+
+
+***Main.Dart
+
+import 'livro.dart';
+
+
+void main(){
+  Livro livro = new Livro("1984", "George Orwell", 1950);
+ livro.exibirDetalhes();
+
+
+}
+
+********Livro.Dart
+
+import 'livro.dart';
+
+class Usuario{
+
+  String nome;
+  List<Livro> LivrosEmprestados = [];
+Usuario(this.nome);
+
+void pegarLivroEmprestado(Livro livro){
+
+  if(livro.emprestado == false){
+    LivrosEmprestados.add(livro);
+    livro.emprestado == true;
+    print ("\ $nome pegou o livro: \ ${livro.titulo}");
+  }else {
+    print(" O livro  \ ${livro.titulo}Já Foi emprestado");
+
+  }
+
+
+}
+
+}
